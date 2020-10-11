@@ -9,7 +9,7 @@ export const history = createBrowserHistory();
 export default function configureStore(preloadedState) {
     
     let middlewares = [thunk];
-    middlewares.push(createLogger);
+    // middlewares.push(createLogger);
 
     const store = createStore(
         createRootReducer(history),

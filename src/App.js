@@ -20,7 +20,7 @@ class App extends Component {
             <link rel="icon" type="image/svg" href={logo} sizes="16x16" />
         </Helmet>
         <Switch>
-          <Route exact path="/" component={Welcome}/>
+          <Route exact  path="/" component={Welcome}/>
           <Route path="/about" component={About}/>
           <Route path="/chosen" component={Chosen}/>
           <Route path="/interface" component={Interface} />

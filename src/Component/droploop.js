@@ -17,8 +17,6 @@ const Canvas = styled.canvas`
   width : 100%;
   height: 100%;
 
-  min-width: 160px;
-  min-height: 60px;
 `;
 const IMG = styled.img`
     top: 6.67%;

@@ -15,7 +15,7 @@ const Container = styled.div`
     align-items: center;
 `
 const Block = styled.div`
-    width: 90%;
+    width: 85%;
     height: 100%;
     justify-self: center;
     display: flex;

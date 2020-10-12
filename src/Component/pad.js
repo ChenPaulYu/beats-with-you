@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { mapColor } from '../Utility/map'
 import { activatePad } from '../Action'
 const Container = styled.div`
-    width: 100%;
+    width: 60px;
     height: 60px;
     margin: 0px 10px;
     border-radius: 5px;

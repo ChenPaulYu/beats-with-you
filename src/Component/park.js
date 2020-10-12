@@ -12,7 +12,7 @@ const Container = styled.div`
 
 `
 const Block = styled.div`
-    width: 85%;
+    width: 90%;
     height: 100%;
     justify-self: center;
     justify-content: start;

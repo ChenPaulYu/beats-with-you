@@ -15,7 +15,7 @@ const Container = styled.div`
     background-color: #2F3236;
 `
 const Block = styled.div`
-    width: 85%;
+    width: 90%;
     height: 80%;
     align-self: center;
     justify-self: center;

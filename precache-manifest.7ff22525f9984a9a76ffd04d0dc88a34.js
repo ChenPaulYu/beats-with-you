@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4f43876c7794afeee76f677dcb858175",
+    "revision": "f8d756bb6999331e32ad1f866cb57b4e",
     "url": "/beats-with-you/index.html"
   },
   {
-    "revision": "648d44ab4f2d56bad989",
+    "revision": "9c67df16a4b53e6689ce",
     "url": "/beats-with-you/static/css/main.7912bf5b.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/beats-with-you/static/js/2.c0d67477.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "648d44ab4f2d56bad989",
-    "url": "/beats-with-you/static/js/main.bc4f187a.chunk.js"
+    "revision": "9c67df16a4b53e6689ce",
+    "url": "/beats-with-you/static/js/main.6a8fb8dd.chunk.js"
   },
   {
     "revision": "177238dbf547cc323fd5",

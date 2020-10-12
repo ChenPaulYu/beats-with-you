@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/beats-with-you/static/css/main.7912bf5b.chunk.css",
-    "main.js": "/beats-with-you/static/js/main.6a8fb8dd.chunk.js",
-    "main.js.map": "/beats-with-you/static/js/main.6a8fb8dd.chunk.js.map",
+    "main.js": "/beats-with-you/static/js/main.767c18a7.chunk.js",
+    "main.js.map": "/beats-with-you/static/js/main.767c18a7.chunk.js.map",
     "runtime-main.js": "/beats-with-you/static/js/runtime-main.88bf3878.js",
     "runtime-main.js.map": "/beats-with-you/static/js/runtime-main.88bf3878.js.map",
     "static/js/2.c0d67477.chunk.js": "/beats-with-you/static/js/2.c0d67477.chunk.js",
     "static/js/2.c0d67477.chunk.js.map": "/beats-with-you/static/js/2.c0d67477.chunk.js.map",
     "index.html": "/beats-with-you/index.html",
-    "precache-manifest.7ff22525f9984a9a76ffd04d0dc88a34.js": "/beats-with-you/precache-manifest.7ff22525f9984a9a76ffd04d0dc88a34.js",
+    "precache-manifest.28bca1c28d67866b7990c024cb363f9a.js": "/beats-with-you/precache-manifest.28bca1c28d67866b7990c024cb363f9a.js",
     "service-worker.js": "/beats-with-you/service-worker.js",
     "static/css/main.7912bf5b.chunk.css.map": "/beats-with-you/static/css/main.7912bf5b.chunk.css.map",
     "static/js/2.c0d67477.chunk.js.LICENSE.txt": "/beats-with-you/static/js/2.c0d67477.chunk.js.LICENSE.txt",
@@ -34,6 +34,6 @@
     "static/js/runtime-main.88bf3878.js",
     "static/js/2.c0d67477.chunk.js",
     "static/css/main.7912bf5b.chunk.css",
-    "static/js/main.6a8fb8dd.chunk.js"
+    "static/js/main.767c18a7.chunk.js"
   ]
 }

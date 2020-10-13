@@ -32,26 +32,27 @@ const HR = styled.hr`
     box-sizing: border-box;
 `
 const P = styled.p`
-    margin: 30px;
     color: ${rgba('#ffffff', 0.8)};
     width: 700px;
-    text-align: justify;
+    text-align: center;
     font-style: normal;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 24px;
     line-height: 160%;
 `
-const A = styled.a`
-    padding: 3px;
-    color: #FFFFFF;
-    cursor: pointer;
-    text-decoration: none;
-    background: ${rgba('#ffffff', 0)};
-    &:hover {
-        background: ${rgba('#ffffff', 0.2)};
-        text-decoration: underline;
-    }
+
+const OL = styled.ol`
+    text-align: left;
 `
+
+const LI = styled.li`
+    color: ${rgba('#ffffff', 0.8)};
+    font-style: normal;
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 160%;
+`
+
 const Button = styled.button`
     width: 160px;
     height: 45px;
@@ -81,14 +82,13 @@ class Intro extends Component {
             <Container className='Intro'>
                 <H1 class="title">Intro</H1>
                 <HR/> 
-                <P>Beats with You join force with AI to help you create beats designed by
-                    <A href='https://www.yachinhsiao.com/about' target="_blank">YC Hsiao</A> & developed by
-                    <A href={'https://paulyuchen.com/'} target="_blank">Bo-Yu Chen</A>. In this website, you are allowed to make beats by choosing the loops extracted from
-                    <A href={'https://freemusicarchive.org/'} target="_blank">Free Music Archive</A>. 
-                    On top of that, our AI models can help with recommending suitable loops for your work by calculating compatibility 
-                    between loops. Please enjoy playing with loops here, and for further technical information, please check out the
-                    <A href='https://arxiv.org/abs/2008.02011' target="_blank">Paper</A>.
-                </P>
+                <P>Let's make beats with AI in 5 minutes !</P>
+                <OL>
+                    <LI>Choose a main loop you like first</LI>
+                    <LI>Let's AI recommend some accomany loops for you</LI>
+                    <LI>Arrange your music in the seqeuncer</LI>
+                    <LI>Have Fun !</LI>
+                </OL>
                 <HR/> 
                 <Button active={true} onClick={onClickNext}>Next</Button>
             </Container>

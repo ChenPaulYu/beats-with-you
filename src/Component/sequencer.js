@@ -78,8 +78,7 @@ class Sequencer extends Component {
                 <Block className='sequencer-block'>
                     <TITLE>
                         <P className='sequencer-p'>
-                            Sequencer &nbsp;
-                            <T>AI recommends loops in Loop area according to the last track here. Just drag and drop a waveform to adjust the order!</T>
+                            Sequencer
                         </P>
                         <HR />
                     </TITLE>

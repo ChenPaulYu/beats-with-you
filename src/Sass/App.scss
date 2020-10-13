@@ -68,15 +68,8 @@ body {
 .tooltip {
     background: rgba($color: #282B2E, $alpha: 0.8);
     border-radius: 10px;
+    font-size: 14px;
 
-    & div {
-        color: #ffffff;
-        cursor: pointer;
-        border-radius: 2px;
-        font-weight: normal;  
-        box-sizing: border-box;
-        text-transform: uppercase;
-    }
 }
 .highlighter {
     background: rgba($color: #ffffff, $alpha: 0.1);

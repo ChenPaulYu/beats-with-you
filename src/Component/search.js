@@ -38,10 +38,6 @@ const Block = styled.div`
     width : 90%;
     height: 90%;
 `
-const CONTENT = styled.div`
-    padding: 10px;
-    margin-top: 10px;
-`
 const TITLE = styled.div`
     display: flex;
     padding: 3px;
@@ -90,14 +86,12 @@ const ARROW = styled.img`
 `
 
 const Loops = styled.div` 
-    padding-top: 10px;
     margin-top: 40px;
     width: 100%;
-    height: 100%;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.2rem;
 `
 const ButtonBlock = styled.div`
     width: 100%;
@@ -174,6 +168,7 @@ const T = styled.p`
     text-align: center;
 `
 
+
 class Search extends Component {
     constructor(props) {
         super(props);
@@ -220,23 +215,22 @@ class Search extends Component {
                         <img src={recycle} alt="Recycle Icon" />
                         <P>Loop</P>
                     </ TITLE>
-                    <CONTENT>
-                        <DROPDOWN onClick={this.genreSelect}> 
-                            <ARROW src={arrow} alt="Arrow" />
-                            <SPAN>Hip-Hop</SPAN>
-                        </DROPDOWN>
-                        <T>Click waveform directly to play the loop</T>
-                        {loaded && 
-                            <Loops className='acc_loops'>
-                                {ids.map((id, index) => (
-                                    <DragLoop
-                                        index={index}
-                                        id={id}
-                                        keys={id}
-                                    />
-                                ))}
-                            </Loops>
-                        }
+                    <DROPDOWN onClick={this.genreSelect}> 
+                        <ARROW src={arrow} alt="Arrow" />
+                        <SPAN>Hip-Hop</SPAN>
+                    </DROPDOWN>
+                    <T>Click waveform directly to play the loop</T>
+                    {loaded && 
+                        <Loops className='acc_loops'>
+                            {ids.map((id, index) => (
+                                <DragLoop
+                                    index={index}
+                                    id={id}
+                                    keys={id}
+                                />
+                            ))}
+                        </Loops>
+                    }
                         {loaded &&
                             <ButtonBlock>
                                 <ADD onClick={this.adding} className='add_track'>
@@ -250,7 +244,7 @@ class Search extends Component {
                             </ButtonBlock>
                         }
                         {!loaded && intro && <LoadContainer><Loading/></LoadContainer>}
-                    </ CONTENT>
+                    {/* </ CONTENT> */}
                 </Block>
             </Container>
         )

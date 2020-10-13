@@ -1,3 +1,6 @@
+import { acc_num } from '../Action'
+
+
 export const steps = [
     {
         element: '.track',
@@ -13,7 +16,7 @@ export const steps = [
         tooltipClass: 'tooltip',
     }, {
         element: '.acc_loops',
-        intro: '<p> Our AI model recommends 10 loops for you,<br> according to the last track of loop in the sequencer</p>',
+        intro: `p> Our AI model recommends ${acc_num} loops for you,<br> according to the last track of loop in the sequencer</p>`,
         position: 'left',
         highlightClass: 'highlighter',
         tooltipClass: 'tooltip',
@@ -25,7 +28,7 @@ export const steps = [
         tooltipClass: 'tooltip',
     }, {
         element: '.refresh',
-        intro: '<p>If the current 10 loops aren’t your type, click here to ask for 10 new ones from AI</p>',
+        intro: `p>If the current ${acc_num} loops aren’t your type, click here to ask for ${acc_num} new ones from AI</p>`,
         position: 'right',
         highlightClass: 'highlighter',
         tooltipClass: 'tooltip',

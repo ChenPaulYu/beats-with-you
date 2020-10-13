@@ -6,12 +6,12 @@ import { mapIcon, mapColor } from '../Utility/map'
 import { rgba } from 'polished'
 import { activatePlayer, drawFinish } from "../Action";
 const Container = styled.div`
-    justify-self: ${props => props.pos && (props.pos == 'right' ? 'end' : 'start')};
     position: relative;
     width : 100%;
     height: 100%;
     max-width: 160px;
     max-height: 60px;
+    display: flex;  
 `
 const Canvas = styled.canvas`
   background-color: ${props => props.color != '' ? rgba(props.color, props.active ? 0.2 : 0.04) : rgba('#000000', 0.5)};

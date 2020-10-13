@@ -85,7 +85,17 @@ const Button = styled.button`
         background: ${ rgba('#ffffff', 0.2) };
     }
 `
-
+const P = styled.p`
+    margin: 10px;
+    color: ${rgba('#ffffff', 0.6)};
+    width: 700px;
+    text-align: justify;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 160%;
+    text-align: center;
+`
 class Chosen extends Component {
     constructor(props) {
         super(props);
@@ -120,6 +130,7 @@ class Chosen extends Component {
         return (
             <Container className='Chosen'>
                 <H1>Choose One Main Loop First</H1>
+                <P>Click Waveform directly to play the loop</P>
                 <Main>
                     {loaded && ids.map((id) => ( 
                         <Loop 

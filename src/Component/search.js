@@ -89,14 +89,21 @@ const ARROW = styled.img`
     right: 10%;
     transform: translateY(-50%);
 `
-
+const T = styled.p`
+    margin-top: 10px;
+    color: ${rgba('#ffffff', 0.6)};
+    text-align: justify;
+    font-style: normal;
+    font-size: 16px;
+    text-align: center;
+`
 const Loops = styled.div` 
     padding-top: 10px;
-    margin-top: 40px;
+    margin-top: 20px;
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
 `
@@ -220,6 +227,7 @@ class Search extends Component {
                             <ARROW src={arrow} alt="Arrow" />
                             <SPAN>Hip-Hop</SPAN>
                         </DROPDOWN>
+                        <T>Click Waveform directly to play the loop</T>
                         {loaded && 
                             <Loops className='acc_loops'>
                                 {ids.map((id, index) => (

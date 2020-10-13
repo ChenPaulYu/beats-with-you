@@ -1,7 +1,7 @@
 import { v4 } from "node-uuid";
 import * as api from "../Utility/api";
 const main_num = 8;
-const acc_num  = 12;
+const acc_num  = 10;
 export const addPlayer = (response, loop_type) => ({
     type: 'ADD_PLAYER',
     loop_type,

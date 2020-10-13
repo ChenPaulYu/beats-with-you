@@ -87,7 +87,7 @@ class About extends Component {
                     <A href={'https://freemusicarchive.org/'} target="_blank">Free Music Archive</A>. 
                     On top of that, our AI models can help with recommending suitable loops for your work by calculating compatibility 
                     between loops. Please enjoy playing with loops here, and for further technical information, please check out the
-                    <A href='https://arxiv.org/abs/2008.02011' target="_blank">Paper</A>.
+                    <A href='https://program.ismir2020.net/poster_3-13.html' target="_blank">Paper</A>.
                 </P>
                 <HR/> 
                 <Button active={true} onClick={onClickClose}>Close</Button>

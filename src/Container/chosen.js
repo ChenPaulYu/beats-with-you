@@ -130,7 +130,7 @@ class Chosen extends Component {
         return (
             <Container className='Chosen'>
                 <H1>Choose One Main Loop First</H1>
-                <P>Click waveform directly to play the loop</P>
+                <P>Click waveform directly to play the loop, <br/> Choose it carefully beacue you can't change it later </P>
                 <Main>
                     {loaded && ids.map((id) => ( 
                         <Loop 

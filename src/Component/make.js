@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import Control from './control'
 import Park from './park'
 import Sequencer from './sequencer'
-import { rgba } from 'polished'
-import { Droppable } from "react-beautiful-dnd";
 
 const Container = styled.div`
     height: 100%;

@@ -103,7 +103,7 @@ const Loops = styled.div`
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
 `
@@ -114,8 +114,8 @@ const ButtonBlock = styled.div`
     flex-direction: row;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 0.6rem;
+    line-height: 0.6rem;    
     text-align: justify;
     color: ${rgba('#FFFFFF', 0.6)};
     background: #282B2E;
@@ -227,7 +227,7 @@ class Search extends Component {
                             <ARROW src={arrow} alt="Arrow" />
                             <SPAN>Hip-Hop</SPAN>
                         </DROPDOWN>
-                        <T>Click Waveform directly to play the loop</T>
+                        <T>Click waveform directly to play the loop</T>
                         {loaded && 
                             <Loops className='acc_loops'>
                                 {ids.map((id, index) => (

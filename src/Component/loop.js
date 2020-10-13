@@ -69,6 +69,11 @@ class Loop extends Component {
         }   
     }
 
+    componentWillUnmount() {
+        const { player } = this.props
+        player.stop()
+    }
+
 
     render() {
         const { color, icon, active } = this.props

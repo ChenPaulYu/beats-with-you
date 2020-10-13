@@ -96,6 +96,7 @@ const Loops = styled.div`
 `
 const ButtonBlock = styled.div`
     width: 100%;
+    margin-top: 5px;
     grid-column: 1/ -1;
     display: flex;
     flex-direction: row;
@@ -232,20 +233,19 @@ class Search extends Component {
                             ))}
                         </Loops>
                     }
-                        {loaded &&
-                            <ButtonBlock>
-                                <ADD onClick={this.adding} className='add_track'>
-                                    <img src={add} />
-                                    <p>Add</p>
-                                </ADD>
-                                <Refresh onClick={this.fetching} className='refresh'>
-                                    <img src={refresh} />
-                                    <p>Refresh</p>
-                                </Refresh>
-                            </ButtonBlock>
-                        }
-                        {!loaded && intro && <LoadContainer><Loading/></LoadContainer>}
-                    {/* </ CONTENT> */}
+                    {loaded &&
+                        <ButtonBlock>
+                            <ADD onClick={this.adding} className='add_track'>
+                                <img src={add} />
+                                <p>Add</p>
+                            </ADD>
+                            <Refresh onClick={this.fetching} className='refresh'>
+                                <img src={refresh} />
+                                <p>Refresh</p>
+                            </Refresh>
+                        </ButtonBlock>
+                    }
+                    {!loaded && intro && <LoadContainer><Loading/></LoadContainer>}
                 </Block>
             </Container>
         )

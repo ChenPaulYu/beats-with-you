@@ -5,7 +5,9 @@ import { drawWaveform } from "../Utility/draw";
 import { mapIcon, mapColor } from '../Utility/map'
 import { rgba } from 'polished'
 import { activatePlayer, drawFinish } from "../Action";
+
 const Container = styled.div`
+    justify-self: ${props => props.index % 2  == 0 ? 'start' : 'end' };
     position: relative;
     width : 100%;
     height: 100%;
@@ -14,10 +16,10 @@ const Container = styled.div`
     display: flex;  
 `
 const Canvas = styled.canvas`
-  background-color: ${props => props.color != '' ? rgba(props.color, props.active ? 0.2 : 0.04) : rgba('#000000', 0.5)};
-  border-radius: 5px;
-  width : 100%;
-  height: 100%;
+    background-color: ${props => props.color != '' ? rgba(props.color, props.active ? 0.2 : 0.04) : rgba('#000000', 0.5)};
+    border-radius: 5px;
+    width : 100%;
+    height: 100%;
 `;
 const IMG = styled.img`
     top: 6.67%;
@@ -87,10 +89,12 @@ class DragLoop extends Component {
 
 
     render() {
-        const { color, icon, active } = this.props
+        const { color, icon, active, index } = this.props
+        console.log('index: ', index)
         return (
-            <Container>
+            <Container index={index}>
                 <Canvas
+                    index={index}
                     active={active}
                     color={color}
                     ref={(x) => (this.canvas = x)}

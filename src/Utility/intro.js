@@ -1,6 +1,4 @@
 import { acc_num } from '../Action'
-
-
 export const steps = [
     {
         element: '.track',

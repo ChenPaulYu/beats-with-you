@@ -68,6 +68,12 @@ const Button = styled.button`
 `
 
 class About extends Component {
+    componentDidMount() {
+        const { onBackMobile } = this.props
+        if (isMobile) {
+            onBackMobile()
+        }
+    }
     render() {
         const { onClickClose } = this.props
         return (
@@ -92,7 +98,10 @@ class About extends Component {
 const mapDispatchToProps = (dispatch) => ({
     onClickClose() {
         dispatch(push('/'));
-    }
+    },
+    onBackMobile() {
+        dispatch(push('/mobile'))
+    },
 });
 
 

@@ -4,6 +4,8 @@ import { rgba } from 'polished'
 import styled from 'styled-components'
 import { connect } from "react-redux";
 import { push } from "connected-react-router";
+import { isMobile } from "react-device-detect";
+
 const Container = styled.div`
     height: 100%;
     display: flex;
@@ -67,9 +69,12 @@ const Button = styled.button`
 `
 
 class Welcome extends Component {
-
-
-
+    componentDidMount() {
+        const { onBackMobile } = this.props
+        if (isMobile) {
+            onBackMobile()
+        }
+    }
     render() {
         const { onClickChosen, onClickAbout } = this.props
         return (
@@ -90,7 +95,10 @@ const mapDispatchToProps = (dispatch) => ({
     }, 
     onClickAbout() {
         dispatch(push('/about'));
-    }
+    },
+    onBackMobile() {
+        dispatch(push('/mobile'))
+    },
 });
 
 

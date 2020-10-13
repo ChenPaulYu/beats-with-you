@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { rgba } from 'polished'
 import { connect } from "react-redux";
 import { push } from "connected-react-router";
+import { isMobile } from "react-device-detect";
 
 const Container = styled.div`
     height: 100%;
@@ -68,6 +69,12 @@ const Button = styled.button`
 `
 
 class Intro extends Component {
+    componentDidMount() {
+        const { onBackMobile } = this.props
+        if (isMobile) {
+            onBackMobile()
+        }
+    }
     render() {
         const { onClickNext } = this.props
         return (
@@ -92,7 +99,10 @@ class Intro extends Component {
 const mapDispatchToProps = (dispatch) => ({
     onClickNext() {
         dispatch(push('/chosen'));
-    }
+    }, 
+    onBackMobile() {
+        dispatch(push('/mobile'))
+    },
 });
 
 

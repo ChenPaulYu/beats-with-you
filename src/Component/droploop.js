@@ -40,7 +40,6 @@ class DropLoop extends Component {
             drawWaveform(canvas, data, color, active);
             player.mute = mute
             player.volume.value = volume
-            player.fadeIn = '8n'
             player.fadeOut = '8n'
             if (play) {
                 player.start();

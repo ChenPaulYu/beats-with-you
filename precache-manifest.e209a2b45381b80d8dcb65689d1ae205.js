@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a89eba6ba50b4bdbd1e6392e6eba301a",
+    "revision": "40c8a20620f50a0a464f446046bdd072",
     "url": "/beats-with-you/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/beats-with-you/static/css/2.118d491f.chunk.css"
   },
   {
-    "revision": "5c19754a34e4982d09bc",
+    "revision": "d13be4bfc0f5ed882583",
     "url": "/beats-with-you/static/css/main.44c5b707.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/beats-with-you/static/js/2.9b4883e9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5c19754a34e4982d09bc",
-    "url": "/beats-with-you/static/js/main.509ebf63.chunk.js"
+    "revision": "d13be4bfc0f5ed882583",
+    "url": "/beats-with-you/static/js/main.1a297364.chunk.js"
   },
   {
     "revision": "177238dbf547cc323fd5",

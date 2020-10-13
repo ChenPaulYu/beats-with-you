@@ -13,7 +13,7 @@ export const steps = [
         tooltipClass: 'tooltip',
     }, {
         element: '.acc_loops',
-        intro: '<p>AI model will recommend some loop for you <br> according to the loops in your sequencer.</p>',
+        intro: '<p>AI model will recommend some loop for you <br> according to the loops in your sequencer</p>',
         position: 'left',
         highlightClass: 'highlighter',
         tooltipClass: 'tooltip',
@@ -31,7 +31,7 @@ export const steps = [
         tooltipClass: 'tooltip',
     }, {
         element: '.tracks',
-        intro: '<p>The recommend loops is according to your loops in last track, drag and drop loops to change order.</p>',
+        intro: '<p>The recommend loops is according to your loops in last track, drag and drop loops to change order</p>',
         position: 'right',
         highlightClass: 'highlighter',
         tooltipClass: 'tooltip',

@@ -64,7 +64,7 @@ class Mobile extends Component {
                 <IMG src={logo} alt="logo" />
                 <H1>Beats With You</H1>
                 <P>Partnership with AI to create Beats</P>
-                <T>Not support mobile device, Please open the computer</T>
+                <T>The interface for mobile devices is now unavailable, please try again via computers.</T>
             </Container>
         )
     }

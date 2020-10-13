@@ -4,8 +4,9 @@ import { routerMiddleware } from "connected-react-router";
 import createLogger from "redux-logger";
 import thunk from "redux-thunk";
 import createRootReducer from "./Reducer";
+import createHashSource from 'hash-source'
 
-export const history = createHistory(createHashSource())
+export const history = createBrowserHistory(createHashSource())
 
 
 // export const history = createBrowserHistory({

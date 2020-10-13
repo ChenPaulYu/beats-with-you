@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { rgba } from 'polished'
 import { connect } from "react-redux";
 import { push } from "connected-react-router";
+import { isMobile } from "react-device-detect";
 
 const Container = styled.div`
     height: 100%;

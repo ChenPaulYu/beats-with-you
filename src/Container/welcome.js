@@ -91,7 +91,7 @@ class Welcome extends Component {
 
 const mapDispatchToProps = (dispatch) => ({
     onClickChosen() {
-        dispatch(push('/intro'));
+        dispatch(push('/chosen'));
     }, 
     onClickAbout() {
         dispatch(push('/about'));

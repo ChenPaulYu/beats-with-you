@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet";
 import Welcome from './Container/welcome';
 import Chosen from './Container/chosen';
 import About from './Container/about'
-import Intro from './Container/intro'
 import Interface from './Container/interface'
 import Mobile from './Container/mobile'
 import { Route, Switch } from "react-router-dom";
@@ -23,7 +22,6 @@ class App extends Component {
         <Switch>
           <Route exact  path="/" component={Welcome}/>
           <Route path="/about" component={About}/>
-          <Route path="/intro" component={Intro} />
           <Route path="/mobile" component={Mobile} />
           <Route path="/chosen" component={Chosen}/>
           <Route path="/interface" component={Interface} />

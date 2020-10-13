@@ -56,6 +56,7 @@ const P = styled.p`
     color: #FFFFFF;
 `
 const DROPDOWN = styled.div`
+    margin-top: 10px;
     position: relative;
     display: flex;
     flex-direction: column;

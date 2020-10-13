@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { rgba } from 'polished'
 import { Draggable } from "react-beautiful-dnd";
 import styled from 'styled-components'
 import DropLoop from './droploop'
@@ -7,6 +6,7 @@ import Manage from './manage'
 import Trash from './trash'
 import { connect } from "react-redux";
 import Pads from './pads'
+
 const Container = styled.div`
     display: flex;
     flex-direction: row;
@@ -14,32 +14,22 @@ const Container = styled.div`
     width: 100%;
     height: 100%;
     max-height: 60px;
-    margin: 0px 10px;
+    margin-top: 5px;
     margin-bottom: 20px;
+    padding: 5px 0px;   
 `
 
-// class Track extends Component {
-//     render() {
-//         const { id, deletable } = this.props
-//         return (
-//             <Container>
-//                 <DropLoop id={id} keys={id}/>
-//                 <Manage id={id} keys={id}/>
-//                 <Pads  id={id} keys={id}/>
-//                 <Trash id={id} keys={id}/>
-//             </Container>
-//         )
-//     }
-// }
 
 class Track extends Component {
     render() {
-        const { id, index } = this.props
+        const { id, index, recommend } = this.props
         return (
             <Draggable key={id} draggableId={id} index={index}>
                 {(provided, snapshot) => {
                     return (
                         <Container
+                            className='track'
+                            recommend={recommend}
                             ref={provided.innerRef}
                             {...provided.draggableProps}
                             {...provided.dragHandleProps}
@@ -70,8 +60,10 @@ class Track extends Component {
 
 const mapStateToProps = (state, ownProps) => {
     const tracks = state['decision'].tracks
+    const ids = state['decision'].ids
     return {
         track: tracks[ownProps.id],
+        recommend: ids[ids.length-1] === ownProps.id
     }
 };
 

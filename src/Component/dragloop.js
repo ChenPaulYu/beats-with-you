@@ -4,8 +4,7 @@ import { connect } from "react-redux";
 import { drawWaveform } from "../Utility/draw";
 import { mapIcon, mapColor } from '../Utility/map'
 import { rgba } from 'polished'
-import { activatePlayer } from "../Action";
-
+import { activatePlayer, drawFinish } from "../Action";
 const Container = styled.div`
     justify-self: ${props => props.pos && (props.pos == 'right' ? 'end' : 'start')};
     position: relative;
@@ -38,11 +37,12 @@ class DragLoop extends Component {
     }
 
     componentDidMount() {
-        const { player, active, color } = this.props;
+        const { player, active, color, onDrawFinish } = this.props;
         if (player) {
             const canvas = this.canvas
             const data = player.buffer.getChannelData()
             drawWaveform(canvas, data, color, active);
+            onDrawFinish('acc')
         }
     }
 
@@ -83,7 +83,7 @@ class DragLoop extends Component {
 
 
     render() {
-        const { color, icon, active, index, id } = this.props
+        const { color, icon, active } = this.props
         return (
             <Container>
                 <Canvas
@@ -101,7 +101,11 @@ class DragLoop extends Component {
 const mapDispatchToProps = (dispatch) => ({
     onAtivatePlayer(id) {
         dispatch(activatePlayer(id))
-    }
+    }, 
+    onDrawFinish(loop_type) {
+        console.log('drawFinish')
+        dispatch(drawFinish(loop_type))
+    } 
 });
 
 const mapStateToProps = (state, ownProps) => {

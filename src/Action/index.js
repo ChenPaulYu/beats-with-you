@@ -75,10 +75,15 @@ export const changeBpm = (bpm) => ({
 export const moveSequencer = () => ({
     type: 'MOVE_SEQUENCER'
 });
-
-
 export const changeTrackOrder = (source_index, target_index) => ({
     type: 'CHANGE_ORDER',
     source_index, 
     target_index
 })
+export const drawFinish = (loop_type) => ({
+    type: 'DRAW_FINISH',
+    num: loop_type == 'main' ? main_num : acc_num
+});
+export const introFinish = () => ({
+    type: 'INTRO_FINISH',
+});

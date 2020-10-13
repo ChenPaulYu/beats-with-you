@@ -6,9 +6,8 @@ import { intializePads } from '../Utility/initial'
 const Container = styled.div`
     display: flex;
     margin-left: 10px;
-    flex-direction: row;
-    justify-content: space-between;
     width: 100%;
+    max-height: 60px;
 `;
 
 class Pads extends Component {

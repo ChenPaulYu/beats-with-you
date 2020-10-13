@@ -48,6 +48,20 @@ const loading = (state={}, action) => {
             return state;
     }  
 }
+
+const drawing = (state={}, action) => {
+    switch (action.type) {
+        case 'REQUEST_START':
+            return { count: 0, loaded: false }
+        case 'DRAW_FINISH':
+            console.log('DRAW FINISH')
+            const next_count = state.count + 1
+            return { count: next_count, loaded: action.num == next_count ? true : false }
+        default:
+            return state;
+    }  
+}
+
 const loops = (state = {}, action) => {
     switch (action.type) {
         case 'ADD_PLAYER':
@@ -72,6 +86,7 @@ const candidate = combineReducers({
     ids,
     loops,
     loading,
+    drawing,
     activateId  
 })
 

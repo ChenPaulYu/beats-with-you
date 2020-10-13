@@ -1,23 +1,30 @@
 import React, { Component } from 'react';
 import loading from '../Assets/icon/loading.svg'
 import styled from 'styled-components'
+import { rgba } from 'polished'
 
 const Container = styled.div`
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    display: block; 
+    z-index: 99; 
+    background-color: ${rgba('#000000', 0.5)}
 `
 
 
 const IMG = styled.img`
-    width: 32px;
-    height: 32px;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 100
 `
 
 
 
-class Loading extends Component {
+class FullLoading extends Component {
     render() {
         return (
             <Container className='Load'>
@@ -27,4 +34,4 @@ class Loading extends Component {
     }
 }
 
-export default Loading;
+export default FullLoading;

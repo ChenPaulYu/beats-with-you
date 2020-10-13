@@ -7,6 +7,7 @@ import refresh from '../Assets/button/refresh.svg'
 import Loop from '../Component/loop'
 import { fetchMainPlayer, refreshPlayer, addTrack } from "../Action"; 
 import { push } from "connected-react-router";
+import { isMobile } from "react-device-detect";
 
 const Container = styled.div`
     height: 100%;
@@ -106,7 +107,12 @@ class Chosen extends Component {
     }
 
     componentDidMount() {
-        this.fetching()
+        const { onBackMobile } = this.props
+        if (isMobile) {
+            onBackMobile()
+        } else {
+            this.fetching()
+        }
     }
     
     render() {
@@ -148,7 +154,10 @@ const mapDispatchToProps = (dispatch) => ({
         dispatch(refreshPlayer())
         dispatch(addTrack(loop, track_num, loop_type))
         dispatch(push('/interface'))
-    } 
+    }, 
+    onBackMobile() {
+        dispatch(push('/mobile'))
+    },
 });
 
 const mapStateToProps = (state) => {

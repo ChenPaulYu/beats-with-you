@@ -5,7 +5,6 @@ import { drawWaveform } from "../Utility/draw";
 import { mapIcon, mapColor }from '../Utility/map'
 import { rgba } from 'polished'
 import { activatePlayer } from "../Action"; 
-
 const Container = styled.div`
     justify-self: ${ props => props.pos && (props.pos == 'right' ? 'end' : 'start')};
     position: relative;
@@ -32,7 +31,6 @@ class DropLoop extends Component {
     constructor(props) {
         super(props);
     }
-
     componentDidMount() {
         const { player, active, color, play, mute, volume, track_num, bar } = this.props;
         console.log('track: ', track_num, ' bar: ', bar, 'play: ', play)
@@ -42,6 +40,8 @@ class DropLoop extends Component {
             drawWaveform(canvas, data, color, active);
             player.mute = mute
             player.volume.value = volume
+            player.fadeIn = '2n'
+            player.fadeOut = '4n'
             if (play) {
                 player.start();
             } else {
@@ -95,7 +95,6 @@ class DropLoop extends Component {
         );
     }
 }
-
 const mapDispatchToProps = (dispatch) => ({
     onAtivatePlayer(id) {
         dispatch(activatePlayer(id))

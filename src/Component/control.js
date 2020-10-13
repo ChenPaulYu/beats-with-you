@@ -121,7 +121,7 @@ class Control extends Component {
         const { playing, bpm } = this.props
         return (
             <Container className='control'>
-                <Block>
+                <Block className='control-block'>
                     <PLAY src={playing ? pause : play} alt='Play' onClick={this.controlPlay}/>
                     <DROPDOWN>
                         <BUTTON onClick={this.controlBpm}>
@@ -134,7 +134,7 @@ class Control extends Component {
                             <A href="#">Link 3</A>
                         </CONTENT>
                     </DROPDOWN>
-                    <SAVE onClick={this.save}>Feedback</SAVE>
+                    <SAVE onClick={this.save} className='feedback'>Feedback</SAVE>
                 </Block>
             </Container>
         )

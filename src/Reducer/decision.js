@@ -95,9 +95,18 @@ const control = (state = {bpm: 120, playing: false, bar: -1}, action) => {
             return state;
     }
 }
+const intro = (state=false, action) => {
+    switch (action.type) {
+        case 'INTRO_FINISH':
+            return true
+        default:
+            return state;
+    }
+}
 
 const decision = combineReducers({
     ids, 
+    intro,
     tracks,
     control,
 })

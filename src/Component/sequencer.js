@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Droppable } from "react-beautiful-dnd";
 
 import { Transport } from "tone";
 import { moveSequencer } from '../Action'
@@ -13,6 +12,12 @@ const Container = styled.div`
     height: 100%;
     display: grid;
     align-items: center;
+`
+
+const TracksContainer = styled.div`
+    display: flex;
+    width : 100%;
+    height: 100%;
 `
 const Block = styled.div`
     width: 85%;
@@ -43,6 +48,7 @@ const T = styled.p`
     font-size: 0.75rem;
     color: ${rgba('#FFFFFF', 0.6)};
     text-transform: none;
+    text-align: left;
 `
 const HR = styled.hr`
     margin: 10px 0px;
@@ -68,16 +74,18 @@ class Sequencer extends Component {
 
     render() {
         return (
-            <Container className='Sequencer'>
-                <Block>
+            <Container className='sequencer'>
+                <Block className='sequencer-block'>
                     <TITLE>
-                        <P>
+                        <P className='sequencer-p'>
                             Sequencer &nbsp;
                             <T>AI recommends loops in Loop area according to the last track here. Just drag and drop a waveform to adjust the order!</T>
                         </P>
                         <HR />
                     </TITLE>
-                    <Tracks />
+                    <TracksContainer>
+                        <Tracks className='tracks_drop'/>
+                    </ TracksContainer>
                 </Block>
             </Container>
         )

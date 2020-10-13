@@ -89,7 +89,9 @@ const ARROW = styled.img`
     right: 10%;
     transform: translateY(-50%);
 `
+
 const Loops = styled.div` 
+    padding-top: 10px;
     margin-top: 40px;
     width: 100%;
     height: 100%;
@@ -121,7 +123,7 @@ const Refresh = styled.button`
     line-height: 16px;
     text-align: justify;
     color: ${rgba('#FFFFFF', 0.6)};
-    background: #282B2E;
+    background: transparent;
     text-transform: uppercase;
     border-radius: 5px;
     & * {
@@ -142,7 +144,7 @@ const ADD = styled.button`
     line-height: 16px;
     justify-content: center;
     color: ${rgba('#FFFFFF', 0.6)};
-    background: #282B2E;
+    background: transparent;
     text-transform: uppercase;
     border-radius: 5px;
 
@@ -166,6 +168,7 @@ const ADD = styled.button`
     }
 
 `
+
 class Search extends Component {
     constructor(props) {
         super(props);
@@ -204,10 +207,10 @@ class Search extends Component {
 
 
     render() {
-        const { ids, loaded } = this.props;
+        const { ids, loaded, intro } = this.props;
         return (
-            <Container className='loopCache'>
-                <Block>
+            <Container className='Search'>
+                <Block className='search-block'>
                     <TITLE>
                         <img src={recycle} alt="Recycle Icon" />
                         <P>Loop</P>
@@ -218,7 +221,7 @@ class Search extends Component {
                             <SPAN>Hip-Hop</SPAN>
                         </DROPDOWN>
                         {loaded && 
-                            <Loops>
+                            <Loops className='acc_loops'>
                                 {ids.map((id, index) => (
                                     <DragLoop
                                         index={index}
@@ -226,21 +229,21 @@ class Search extends Component {
                                         keys={id}
                                     />
                                 ))}
-                                </Loops>
+                            </Loops>
                         }
                         {loaded &&
                             <ButtonBlock>
-                                <ADD onClick={this.adding}>
+                                <ADD onClick={this.adding} className='add_track'>
                                     <img src={add} />
                                     <p>Add</p>
                                 </ADD>
-                                <Refresh onClick={this.fetching}>
+                                <Refresh onClick={this.fetching} className='refresh'>
                                     <img src={refresh} />
                                     <p>Refresh</p>
                                 </Refresh>
                             </ButtonBlock>
                         }
-                        {!loaded && <LoadContainer><Loading/></LoadContainer>}
+                        {!loaded && intro && <LoadContainer><Loading/></LoadContainer>}
                     </ CONTENT>
                 </Block>
             </Container>
@@ -260,6 +263,7 @@ const mapDispatchToProps = (dispatch) => ({
 });
 const mapStateToProps = (state) => {
     const trackIds = state['decision'].ids
+
     return {
         track_num: state['decision'].ids.length,
         ids: state['candidate'].ids,
@@ -267,7 +271,8 @@ const mapStateToProps = (state) => {
         loaded: state['candidate']['loading'].loaded,   
         active: state['candidate']['activateId'] != '',
         activeLoop: state['candidate'].loops[state['candidate']['activateId']],
-        sourceUrl: trackIds.length > 0 ? state['decision']['tracks'][trackIds[trackIds.length - 1]].url : undefined
+        sourceUrl: trackIds.length > 0 ? state['decision']['tracks'][trackIds[trackIds.length - 1]].url : undefined,
+        intro: state['decision'].intro
     }
 };
 Search = connect(mapStateToProps, mapDispatchToProps)(Search)

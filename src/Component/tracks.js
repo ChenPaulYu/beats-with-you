@@ -10,6 +10,7 @@ const Container = styled.div`
     flex-direction: column;
     align-items: flex-start;
     margin-top: 20px;
+    padding: 0px;
 `
 
 class Tracks extends Component {
@@ -19,6 +20,7 @@ class Tracks extends Component {
             <Droppable key='droppable-tracks' droppableId='droppable-tracks'>
                 {(provided) => (
                     <Container
+                        className='tracks'
                         ref={provided.innerRef}
                         {...provided.droppableProps}
                     >

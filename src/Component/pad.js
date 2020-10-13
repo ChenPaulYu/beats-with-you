@@ -5,7 +5,6 @@ import { mapColor } from '../Utility/map'
 import { activatePad } from '../Action'
 const Container = styled.div`
     width: 100%;
-    height: 60px;
     margin: 0px 10px;
     border-radius: 5px;
     background-color: ${(props) => (props.color ? props.color : '#000000')};

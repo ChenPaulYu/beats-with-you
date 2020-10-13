@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/beats-with-you/static/css/main.7912bf5b.chunk.css",
-    "main.js": "/beats-with-you/static/js/main.767c18a7.chunk.js",
-    "main.js.map": "/beats-with-you/static/js/main.767c18a7.chunk.js.map",
+    "main.css": "/beats-with-you/static/css/main.2c222ca0.chunk.css",
+    "main.js": "/beats-with-you/static/js/main.7ba5a830.chunk.js",
+    "main.js.map": "/beats-with-you/static/js/main.7ba5a830.chunk.js.map",
     "runtime-main.js": "/beats-with-you/static/js/runtime-main.88bf3878.js",
     "runtime-main.js.map": "/beats-with-you/static/js/runtime-main.88bf3878.js.map",
-    "static/js/2.c0d67477.chunk.js": "/beats-with-you/static/js/2.c0d67477.chunk.js",
-    "static/js/2.c0d67477.chunk.js.map": "/beats-with-you/static/js/2.c0d67477.chunk.js.map",
+    "static/css/2.118d491f.chunk.css": "/beats-with-you/static/css/2.118d491f.chunk.css",
+    "static/js/2.028722e7.chunk.js": "/beats-with-you/static/js/2.028722e7.chunk.js",
+    "static/js/2.028722e7.chunk.js.map": "/beats-with-you/static/js/2.028722e7.chunk.js.map",
     "index.html": "/beats-with-you/index.html",
-    "precache-manifest.28bca1c28d67866b7990c024cb363f9a.js": "/beats-with-you/precache-manifest.28bca1c28d67866b7990c024cb363f9a.js",
+    "precache-manifest.2dfdd05389873ed3233e19d3dcfa0f16.js": "/beats-with-you/precache-manifest.2dfdd05389873ed3233e19d3dcfa0f16.js",
     "service-worker.js": "/beats-with-you/service-worker.js",
-    "static/css/main.7912bf5b.chunk.css.map": "/beats-with-you/static/css/main.7912bf5b.chunk.css.map",
-    "static/js/2.c0d67477.chunk.js.LICENSE.txt": "/beats-with-you/static/js/2.c0d67477.chunk.js.LICENSE.txt",
+    "static/css/2.118d491f.chunk.css.map": "/beats-with-you/static/css/2.118d491f.chunk.css.map",
+    "static/css/main.2c222ca0.chunk.css.map": "/beats-with-you/static/css/main.2c222ca0.chunk.css.map",
+    "static/js/2.028722e7.chunk.js.LICENSE.txt": "/beats-with-you/static/js/2.028722e7.chunk.js.LICENSE.txt",
     "static/media/add.svg": "/beats-with-you/static/media/add.7bdfba82.svg",
     "static/media/arrow.svg": "/beats-with-you/static/media/arrow.31771389.svg",
     "static/media/bass.svg": "/beats-with-you/static/media/bass.10ff83a3.svg",
@@ -32,8 +34,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.88bf3878.js",
-    "static/js/2.c0d67477.chunk.js",
-    "static/css/main.7912bf5b.chunk.css",
-    "static/js/main.767c18a7.chunk.js"
+    "static/css/2.118d491f.chunk.css",
+    "static/js/2.028722e7.chunk.js",
+    "static/css/main.2c222ca0.chunk.css",
+    "static/js/main.7ba5a830.chunk.js"
   ]
 }

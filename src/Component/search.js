@@ -27,7 +27,6 @@ const Container = styled.div`
     background-color: #282B2E;
     display: flex;
     flex-direction: row;
-
     align-content: center;
     justify-content: center;
     margin-top: auto;
@@ -68,8 +67,8 @@ const DROPDOWN = styled.div`
     height: 45px;
     color: #FFFFFF;
     cursor: pointer;
-    background: ${ rgba('#3A3E43', 0) };
-    border: 1px solid ${ rgba('#FFFFFF', 0.2) };
+    background: ${rgba('#3A3E43', 0)};
+    border: 1px solid ${rgba('#FFFFFF', 0.2)};
     box-sizing: border-box;
     align-items: center;
     justify-content: center;
@@ -89,21 +88,14 @@ const ARROW = styled.img`
     right: 10%;
     transform: translateY(-50%);
 `
-const T = styled.p`
-    margin-top: 10px;
-    color: ${rgba('#ffffff', 0.6)};
-    text-align: justify;
-    font-style: normal;
-    font-size: 16px;
-    text-align: center;
-`
+
 const Loops = styled.div` 
     padding-top: 10px;
-    margin-top: 20px;
+    margin-top: 40px;
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
 `
@@ -114,8 +106,8 @@ const ButtonBlock = styled.div`
     flex-direction: row;
     font-style: normal;
     font-weight: normal;
-    font-size: 0.6rem;
-    line-height: 0.6rem;    
+    font-size: 14px;
+    line-height: 16px;
     text-align: justify;
     color: ${rgba('#FFFFFF', 0.6)};
     background: #282B2E;
@@ -139,8 +131,8 @@ const Refresh = styled.button`
     &:hover, :active {
         background: ${rgba('#FFFFFF', 0.2)};
     }
-
 `
+
 const ADD = styled.button`
     display: flex;
     border: none;
@@ -154,26 +146,32 @@ const ADD = styled.button`
     background: transparent;
     text-transform: uppercase;
     border-radius: 5px;
-
     & p {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-
     & img {
         display: grid;
         align-items: center;
         justify-content: center;
     }
-
     & * {
         padding: 2px;
     }
     &:hover, :active {
         background: ${rgba('#FFFFFF', 0.2)};
     }
+`
 
+
+const T = styled.p`
+    margin-top: 10px;
+    color: ${rgba('#ffffff', 0.6)};
+    text-align: justify;
+    font-style: normal;
+    font-size: 16px;
+    text-align: center;
 `
 
 class Search extends Component {

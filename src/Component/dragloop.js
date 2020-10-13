@@ -10,7 +10,8 @@ const Container = styled.div`
     position: relative;
     width : 100%;
     height: 100%;
-    border: 1px solid
+    max-width: 160px;
+    max-height: 60px;
 `
 const Canvas = styled.canvas`
   background-color: ${props => props.color != '' ? rgba(props.color, props.active ? 0.2 : 0.04) : rgba('#000000', 0.5)};

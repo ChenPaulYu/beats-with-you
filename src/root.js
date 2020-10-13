@@ -7,7 +7,7 @@ import App from "./App";
 
 const Root = ({ store }) => (
     <Provider store={store}>
-        <ConnectedRouter history={history} >
+        <ConnectedRouter history={history}>
             <App />
         </ConnectedRouter>
     </Provider>

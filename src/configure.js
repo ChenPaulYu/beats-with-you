@@ -4,9 +4,13 @@ import { routerMiddleware } from "connected-react-router";
 import createLogger from "redux-logger";
 import thunk from "redux-thunk";
 import createRootReducer from "./Reducer";
-export const history = createBrowserHistory({
-    basename: process.env.PUBLIC_URL,
-});
+
+export const history = createHistory(createHashSource())
+
+
+// export const history = createBrowserHistory({
+//     basename: process.env.PUBLIC_URL,
+// });
 
 export default function configureStore(preloadedState) {
     

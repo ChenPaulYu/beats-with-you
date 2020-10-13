@@ -25,6 +25,7 @@ class App extends Component {
           <Route path="/mobile" component={Mobile} />
           <Route path="/chosen" component={Chosen}/>
           <Route path="/interface" component={Interface} />
+          <Route component={Welcome} />
         </Switch>
       </div>
     )
